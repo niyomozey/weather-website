@@ -1,0 +1,41 @@
+
+body{
+    width: 100%;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    color: teal;
+}
+img{
+    text-align: center;
+    margin: auto;
+}
+.bImg{
+    margin: auto;
+    text-align: center;
+}
+.navbar{
+    width: 100%;
+    text-align: center;
+    height: 15vh;
+    margin-top: 0;
+    display: block;
+    background: lightgoldenrodyellow;
+}
+.bd{
+    /* margin-top: 21vh; */
+}
+.navbar >h1{
+    padding: 10px;
+    color:black;
+}
+.bottom{
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+}
+.bottom>h1{
+    padding-top: 23vh;
+
+}

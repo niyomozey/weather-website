@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="shortcut icon" type="image/png" href="../icon/weather.png">
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        
+        <div class="bd">
+            <h1>Welcome to weather application (Location :<%=location%></h1>
+            <h1>Create by <%=name%></h1>
+            <p>Use this website to get your weather</p>
+            <form>
+               <input name="address">
+               <input type="submit" > 
+            </form>
+            <!-- <div class="bImg">
+                <img src="../hck.jpg">
+            </div> -->
+            <div>
+                <p id="msg-1"></p>
+                <p id="msg-2"></p>
+            </div>
+        </div>
+        
+        <%- include('../partials/footer.ejs') %>
+        <script src="../js/script.js"></script>
+    </body>
+</html>
