@@ -3,14 +3,14 @@ const express = require('express')
 const publicDirectoryPath = path.join(__dirname+'/public');
 const app = express()
 const bodyParser = require('body-parser')
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3030
 const geocode = require(publicDirectoryPath+'/utils/geocode.js');
 const forecast = require(publicDirectoryPath+'/utils/forecast.js')
 
 // app.set("view engine","hbs")
 app.set("view engine","ejs")
 app.use(express.static(publicDirectoryPath))
-app.set('views', publicDirectoryPath+"views");
+app.set('views', publicDirectoryPath+"/views");
 // app.use(bodyParser.urlencoded({extended : false}))
 const urlbodyparser = bodyParser.urlencoded({extended : false});
 app.use(bodyParser.json())
@@ -67,7 +67,5 @@ app.get('/weather',(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log(__dirname)
-    console.log(publicDirectoryPath)
-    console.log('server connected.....')
+    console.log('server connected on port: '+port)
 })

@@ -6,19 +6,15 @@
         <link rel="shortcut icon" type="image/png" href="../icon/weather.png">
     </head>
     <body>
-        <%- include('../partials/header.ejs') %>
+            <%- include('../partials/header.ejs') %>
         
-        <div class="bd">
-            <h1>Welcome to weather application (Location :<%=location%></h1>
-            <h1>Create by <%=name%></h1>
-            <p>Use this website to get your weather</p>
+        <div class="home-bd">
+            <h1>Welcome to weather application</h1>
+            <h2>Use this website to get your weather</h2>
             <form>
-               <input name="address">
-               <input type="submit" > 
+               <input name="address" placeholder="Location eg:london">
+               <input class="fetch-btn" type="submit" > 
             </form>
-            <!-- <div class="bImg">
-                <img src="../hck.jpg">
-            </div> -->
             <div>
                 <p id="msg-1"></p>
                 <p id="msg-2"></p>
