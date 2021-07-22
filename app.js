@@ -1,8 +1,9 @@
-const path = require('path')
+const path =  require('path')
 const express = require('express')
 const publicDirectoryPath = path.join(__dirname+'/public');
 const app = express()
 const bodyParser = require('body-parser')
+const port = process.env.PORT || 3000
 const geocode = require(publicDirectoryPath+'/utils/geocode.js');
 const forecast = require(publicDirectoryPath+'/utils/forecast.js')
 
@@ -65,7 +66,7 @@ app.get('/weather',(req,res)=>{
     })
 })
 
-app.listen(8087,()=>{
+app.listen(port,()=>{
     console.log(__dirname)
     console.log(publicDirectoryPath)
     console.log('server connected.....')
